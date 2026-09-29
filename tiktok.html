@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TikTok</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      width: 100%;
+      max-width: 430px;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* TikTok top bar */
+    .top {
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    /* Error screen */
+    .error {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .error-icon {
+      width: 65px;
+      height: 65px;
+      border: 3px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #a8a8a8;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      max-width: 300px;
+    }
+
+    button {
+      background: #fe2c55;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:active {
+      opacity: 0.7;
+    }
+
+    /* Bottom navigation */
+    .bottom {
+      height: 65px;
+      border-top: 1px solid #222;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 25px;
+    }
+
+    .nav {
+      color: white;
+    }
+
+    .plus {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="phone">
+
+    <div class="top">
+      <div class="logo">TikTok</div>
+    </div>
+
+    <div class="error">
+
+      <div class="error-icon">!</div>
+
+      <h2>Something went wrong</h2>
+
+      <p>
+        There was a problem loading this page.
+        Please try again.
+      </p>
+
+      <button onclick="tryAgain()">Try Again</button>
+
+    </div>
+
+    <div class="bottom">
+      <div class="nav">⌂</div>
+      <div class="nav">⌕</div>
+      <div class="nav plus">＋</div>
+      <div class="nav">♡</div>
+      <div class="nav">◎</div>
+    </div>
+
+  </div>
+
+  <script>
+    function tryAgain() {
+      alert("Something went wrong. Please try again later.");
+    }
+  </script>
+
+</body>
+</html>
